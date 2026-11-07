@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connexion | Spring Security</title><link rel="stylesheet" th:href="@{/css/style.css}"></head>
+<body><main><h1>Connexion</h1><p class="error" role="alert" th:if="${param.error}">Identifiant ou mot de passe invalide.</p>
+<form th:action="@{/login}" method="post">
+<label for="username">Nom d'utilisateur</label><input id="username" name="username" autocomplete="username" required>
+<label for="password">Mot de passe</label><input id="password" name="password" type="password" autocomplete="current-password" required>
+<button type="submit">Se connecter</button></form><p><a th:href="@{/}">Retour à l'accueil</a></p></main></body>
+</html>
